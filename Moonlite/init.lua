@@ -675,8 +675,8 @@ local function restoreTrack(self: MoonTrack)
 
 	if self.RestoreDefaults then
 		for instance, props in defaults do
-			for name, value in props do
-				setPropValue(self, instance, name, value)
+			for name, valueTbl in props do
+				setPropValue(self, instance, name, valueTbl.Value)
 			end
 		end
 	end
@@ -925,7 +925,7 @@ function MoonTrack.Play(self: MoonTrack)
 		for name in frames[0] do
 			local success, value = getPropValue(self, instance, name)
 			if success then
-				defaults[name] = value
+				defaults[name] = { Value = value }
 			end
 		end
 	end

@@ -68,7 +68,7 @@ export type MoonElement = {
 }
 
 export type MoonProperties = {
-	[string]: any,
+	[string]: { Value: any },
 }
 
 export type MoonFrameBuffer = {
