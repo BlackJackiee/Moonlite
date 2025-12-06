@@ -68,6 +68,10 @@ export type MoonElement = {
 }
 
 export type MoonProperties = {
+	[string]: any,
+}
+
+export type MoonPropertiesNil = {
 	[string]: { Value: any },
 }
 

@@ -36,6 +36,7 @@ type MoonKeyframe = Types.MoonKeyframe
 type MoonProperty = Types.MoonProperty
 type MoonJointInfo = Types.MoonJointInfo
 type MoonProperties = Types.MoonProperties
+type MoonPropertiesNil = Types.MoonPropertiesNil
 type MoonFrameBuffer = Types.MoonFrameBuffer
 type MoonElementLocks = Types.MoonElementLocks
 type MoonKeyframePack = Types.MoonKeyframePack
@@ -80,7 +81,7 @@ export type MoonTrack = typeof(setmetatable({} :: {
 
 local PlayingTracks = {} :: {
 	[MoonTrack]: {
-		[Instance]: MoonProperties,
+		[Instance]: MoonPropertiesNil,
 	},
 }
 
